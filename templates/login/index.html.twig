@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    {% if error %}
+    {#Utilisation du système de traduction de symfony, récupération du système d'erreur et affichage#}
+    <div> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+     {% endif %}
+    {#création d'un formulaire sans form builder comme pour signin#}
+    <form action="{{path('app_login')}}" method ="post">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="_username" value ="{{last_username}}"/>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="_password"/>
+       <button type="submit">login</button>
+    {#redirection sur la page admin une fois que la connexion s'est faite#}
+        <input type="hidden" name="_target_path" value='/admin'>
+    </form> 
+
+{% endblock %}
+
