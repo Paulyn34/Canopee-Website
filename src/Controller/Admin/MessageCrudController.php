@@ -31,7 +31,7 @@ class MessageCrudController extends AbstractCrudController
         $name =TextField::new('name',"Nom de l'expéditeur");
         $email =TextField::new('email',"Adresse Email de l'expéditeur");
         $phone=TextField::new('phone', "Numéro de téléphone de l'expéditeur");
-        $text=TextEditorField::new('text', 'Présentation');
+        $text=TextField::new('text', 'Présentation');
         $fields[]=$name;
         $fields[]=$email;
         $fields[]=$phone;

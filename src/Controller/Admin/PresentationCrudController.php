@@ -30,7 +30,7 @@ class PresentationCrudController extends AbstractCrudController
         $fields =[];
 
         $name =TextField::new('page','Page correspondant à la présentation');
-        $text=TextEditorField::new('text', 'Présentation');
+        $text=TextField::new('text', 'Présentation');
         $fields[]=$name;
         $fields[]=$text;
         return $fields;
