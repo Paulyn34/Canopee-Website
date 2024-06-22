@@ -14,14 +14,20 @@ export default function PerformancesPage() {
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/performances/1")
-      .then((response) => console.log(response.data))
-      .then((data) => setPerformances(data));
+      .then((response) => response.data)
+      .then((data) => {
+        console.log("json:", data);
+        setPerformances(data);
+      });
   }, []);
   return (
     <>
       <div>
         <div className="d-flex flex-column m-2 ">
-          <img src="" alt="drawing-garden"></img>
+          <img
+            src={performance ? "/uploads/" + performance.mainPhoto : ""}
+            alt="drawing-garden"
+          ></img>
           <p className="text-center p-1 fw-bold"></p>
           <div className="d-flex justify-content-center">
             <Button variant="success" onClick={handleShow}>
@@ -34,7 +40,12 @@ export default function PerformancesPage() {
         <Modal.Header closeButton>
           <Modal.Title>Taille des haies</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <img
+            src={performance ? "/uploads/" + performance.mainPhoto : ""}
+            alt="drawing-garden"
+          ></img>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

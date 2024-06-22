@@ -25,7 +25,7 @@ export default function FormContact2() {
       .post("http://127.0.0.1:8000/api/messages", formData, {
         headers: { "Content-Type": "application/ld+json" },
       })
-      .then((response) => console.log("reour axios post :", response));
+      .then((response) => console.log("retour axios post :", response));
   };
 
   return (
