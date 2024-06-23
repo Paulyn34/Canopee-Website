@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 
-export default function FormContact2() {
+export default function FormContact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

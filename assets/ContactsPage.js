@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
-import FormContact2 from "./FormContact2";
+import FormContact from "./FormContact";
 
 export default function ContactsPage() {
   const [presentation, setPresentation] = useState();
@@ -21,7 +21,9 @@ export default function ContactsPage() {
         </div>
         <h4 className="card-footer text-success">CANOPEES</h4>
       </div>
-      <FormContact2></FormContact2>
+      <br></br>
+      <FormContact></FormContact>
+      <br></br>
     </Fragment>
   );
 }

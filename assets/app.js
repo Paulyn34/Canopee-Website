@@ -18,6 +18,8 @@ import HomePage from "./HomePage";
 import PartnersPage from "./PartnersPage";
 import PerformancesPage from "./PerformancesPage";
 import ContactsPage from "./ContactsPage";
+import PricesPage from "./PricesPage";
+import Footer from "./components/Footer";
 
 console.log("Hello ");
 
@@ -30,9 +32,11 @@ const App = () => {
           <Route path="/partners" Component={PartnersPage}></Route>
           <Route path="/performances" Component={PerformancesPage}></Route>
           <Route path="/contacts" Component={ContactsPage}></Route>
+          <Route path="/prices" Component={PricesPage}></Route>
           <Route path="/" Component={HomePage}></Route>
         </Routes>
       </main>
+      <Footer></Footer>
     </HashRouter>
   );
 };

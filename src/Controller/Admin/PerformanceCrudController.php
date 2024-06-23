@@ -49,7 +49,7 @@ class PerformanceCrudController extends AbstractCrudController
                 ->setUploadedFileNamePattern('[randomhash].png')
                 ->setRequired(true)
         ];
-        $title =TextEditorField::new('title',"Texte de la modale");
+        $title =TextField::new('title',"Texte de la modale");
         $category =TextField::new('category',"Catégorie de la prestation");
         $fields[]=$title;
         $fields[]=$category;

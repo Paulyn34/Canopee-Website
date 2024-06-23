@@ -1,28 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+//import logo Canopees
+import logo from "../ressources/images/logo-canopees.png";
+
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Canopée
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor02"
-            aria-controls="navbarColor02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <img style={{ width: "18rem" }} src={logo} alt="Logo" />
+
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link " href="#">
                   Accueil
                 </a>
               </li>
@@ -37,9 +29,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link to="/prices" className="nav-link">
                   Tarifs
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link to="/contacts" className="nav-link">

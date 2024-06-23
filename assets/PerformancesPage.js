@@ -28,7 +28,9 @@ export default function PerformancesPage() {
             src={performance ? "/uploads/" + performance.mainPhoto : ""}
             alt="drawing-garden"
           ></img>
-          <p className="text-center p-1 fw-bold"></p>
+          <p className="text-center p-1 fw-bold">
+            {performance ? performance.category : ""}
+          </p>
           <div className="d-flex justify-content-center">
             <Button variant="success" onClick={handleShow}>
               Découvrir
@@ -41,17 +43,24 @@ export default function PerformancesPage() {
           <Modal.Title>Taille des haies</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img
-            src={performance ? "/uploads/" + performance.mainPhoto : ""}
-            alt="drawing-garden"
-          ></img>
+          <div>
+            <img
+              src={performance ? "/uploads/" + performance.photoModal1 : ""}
+              alt="drawing-garden"
+              style={{ width: "18rem" }}
+            ></img>
+            <img
+              src={performance ? "/uploads/" + performance.photomodal2 : ""}
+              alt="drawing-garden"
+              style={{ width: "18rem" }}
+            ></img>
+          </div>
+
+          {performance ? performance.title : ""}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="success" onClick={handleClose}>
-            Save Changes
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
