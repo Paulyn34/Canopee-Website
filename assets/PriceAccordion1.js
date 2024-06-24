@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 import axios from "axios";
 import { useState } from "react";
 
-export default function PriceAccordion() {
+export default function PriceAccordion1() {
   const [prices, setPrices] = useState();
   useEffect(() => {
     axios
@@ -19,7 +19,7 @@ export default function PriceAccordion() {
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>
-            <h3>Tarifs des différentes prestations :</h3>
+            <h3>Taille des haies :</h3>
           </Accordion.Header>
           {prices
             ? prices.map((price) => (

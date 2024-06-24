@@ -1,0 +1,60 @@
+body {
+  background-color: #f3f8e9;
+}
+$customGreen: #96c245;
+$customLavender: #2a4b9b;
+$shade-green-1: #f3f8e9;
+$shade-mauve-1: #e9dfed;
+
+//navbar
+//main-nav
+
+.navbar a {
+  position: relative;
+  color: $customGreen;
+}
+.navbar a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #7eb41b;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar {
+  background-color: $shade-green-1;
+  color: $customGreen;
+}
+
+.navbar button {
+  background: none;
+  color: #692b85;
+  border: 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+//footer
+.bg-body-green {
+  background-color: #96c245;
+}
+
+.card {
+  background-color: #e9dfed;
+  color: #2a4b9b;
+}
+button {
+  background-color: #7eb41b;
+  border-top-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-width: 0;
+  padding: 0px 10px;
+}

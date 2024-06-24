@@ -9,17 +9,18 @@ export default function ContactsPage() {
     axios
       .get("http://127.0.0.1:8000/api/presentations/5")
       .then((response) => response.data.text)
-      .then((text) => setPresentation(text));
+      .then((text) => setPresentation(text))
+      .catch(function (error) {
+        console.log(error);
+      });
   }, []);
 
   return (
     <Fragment>
       <div className="card text-center">
-        <h4 className="card-header text-success">Accueil</h4>
         <div className="card-body">
           <h5 className="card-title"> {presentation}</h5>
         </div>
-        <h4 className="card-footer text-success">CANOPEES</h4>
       </div>
       <br></br>
       <FormContact></FormContact>

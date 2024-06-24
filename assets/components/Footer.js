@@ -11,19 +11,19 @@ import icon2 from "../ressources/icons/icons8-phone-50.png";
 export default function Footer() {
   return (
     <Fragment>
-      <Navbar className="bg-body-tertiary">
+      <Navbar className="bg-body-green">
         <Container>
           <img style={{ width: "18rem" }} src={logo} alt="Logo" />
         </Container>
       </Navbar>
-      <Navbar className="bg-body-tertiary">
+      <Navbar className="bg-body-green">
         <Container className="d-flex flex-end">
           <Navbar.Brand href="#">GGU</Navbar.Brand>
           <Navbar.Brand href="#">CVG</Navbar.Brand>
           <Navbar.Brand href="#">Mentions légales</Navbar.Brand>
         </Container>
       </Navbar>
-      <Navbar className="bg-body-tertiary">
+      <Navbar className="bg-body-green">
         <Container>
           <Navbar.Brand>
             <img

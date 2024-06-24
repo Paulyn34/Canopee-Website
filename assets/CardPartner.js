@@ -18,22 +18,24 @@ export default function CardPartner() {
 
   return (
     <Fragment>
-      {partners
-        ? partners.map((partner) => (
-            <Card key={partner.id} style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src={partner ? "/uploads/" + partner.photo : ""}
-                alt="photo-partner"
-                style={{ width: "18rem" }}
-              />
-              <Card.Body>
-                <Card.Title>{partner ? partner.name : ""}</Card.Title>
-                <Card.Text>{partner ? partner.description : ""}</Card.Text>
-              </Card.Body>
-            </Card>
-          ))
-        : "En cours de chargement"}
+      <div className="row row-cols-1 row-cols-sm-2 d-flex justify-content-around">
+        {partners
+          ? partners.map((partner) => (
+              <Card key={partner.id} style={{ width: "25rem" }}>
+                <Card.Img
+                  variant="top"
+                  src={partner ? "/uploads/" + partner.photo : ""}
+                  alt="photo-partner"
+                  style={{ width: "25rem" }}
+                />
+                <Card.Body>
+                  <Card.Title>{partner ? partner.name : ""}</Card.Title>
+                  <Card.Text>{partner ? partner.description : ""}</Card.Text>
+                </Card.Body>
+              </Card>
+            ))
+          : "En cours de chargement"}
+      </div>
     </Fragment>
   );
 }

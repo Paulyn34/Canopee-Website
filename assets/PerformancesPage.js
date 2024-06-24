@@ -1,69 +1,37 @@
-import React from "react";
-import { useState } from "react";
+import React, { Fragment } from "react";
+import ModalPerformancePage1 from "./ModalPerformancePage1";
+import ModalPerformancePage2 from "./ModalPerformancePage2";
+import ModalPerformancePage3 from "./ModalPerformancePage3";
+import ModalPerformancePage4 from "./ModalPerformancePage4";
+import ModalPerformancePage5 from "./ModalPerformancePage5";
 import { useEffect } from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import { useState } from "react";
 import axios from "axios";
 
 export default function PerformancesPage() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [presentation, setPresentation] = useState();
 
-  const [performance, setPerformances] = useState();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/performances/1")
-      .then((response) => response.data)
-      .then((data) => {
-        console.log("json:", data);
-        setPerformances(data);
+      .get("http://127.0.0.1:8000/api/presentations/3")
+      .then((response) => response.data.text)
+      .then((text) => setPresentation(text))
+      .catch(function (error) {
+        console.log(error);
       });
   }, []);
   return (
-    <>
-      <div>
-        <div className="d-flex flex-column m-2 ">
-          <img
-            src={performance ? "/uploads/" + performance.mainPhoto : ""}
-            alt="drawing-garden"
-          ></img>
-          <p className="text-center p-1 fw-bold">
-            {performance ? performance.category : ""}
-          </p>
-          <div className="d-flex justify-content-center">
-            <Button variant="success" onClick={handleShow}>
-              Découvrir
-            </Button>
-          </div>
+    <Fragment>
+      <div className="card text-center ">
+        <div className="card-body">
+          <h5 className="card-title"> {presentation}</h5>
         </div>
       </div>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Taille des haies</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div>
-            <img
-              src={performance ? "/uploads/" + performance.photoModal1 : ""}
-              alt="drawing-garden"
-              style={{ width: "18rem" }}
-            ></img>
-            <img
-              src={performance ? "/uploads/" + performance.photomodal2 : ""}
-              alt="drawing-garden"
-              style={{ width: "18rem" }}
-            ></img>
-          </div>
-
-          {performance ? performance.title : ""}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="success" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+      <ModalPerformancePage1></ModalPerformancePage1>
+      <ModalPerformancePage2></ModalPerformancePage2>
+      <ModalPerformancePage3></ModalPerformancePage3>
+      <ModalPerformancePage4></ModalPerformancePage4>
+      <ModalPerformancePage5></ModalPerformancePage5>
+    </Fragment>
   );
 }
