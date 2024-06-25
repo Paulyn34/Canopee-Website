@@ -37,7 +37,7 @@ class PartnerCrudController extends AbstractCrudController
         ];
 
         $name =TextField::new('name',"Nom de l'associé");
-        $text=TextEditorField::new('description', 'Description');
+        $text=TextField::new('description', 'Description');
         $fields[]=$name;
         $fields[]=$text;
         return $fields;

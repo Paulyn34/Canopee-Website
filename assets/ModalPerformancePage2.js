@@ -32,15 +32,13 @@ export default function ModalPerformancePage2() {
             {performance ? performance.category : ""}
           </p>
           <div className="d-flex justify-content-center">
-            <Button variant="success" onClick={handleShow}>
-              Découvrir
-            </Button>
+            <button onClick={handleShow}>Découvrir</button>
           </div>
         </div>
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Taille des haies</Modal.Title>
+          <Modal.Title> {performance ? performance.category : ""}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <img
@@ -56,9 +54,7 @@ export default function ModalPerformancePage2() {
           <p>{performance ? performance.title : ""}</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleClose}>
-            Close
-          </Button>
+          <button onClick={handleClose}>Fermer</button>
         </Modal.Footer>
       </Modal>
     </>

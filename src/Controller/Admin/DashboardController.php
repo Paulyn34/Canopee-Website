@@ -57,7 +57,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linkToCrud('Messages', 'fa fa-commenting-o', Message::class);
-        yield MenuItem::linkToCrud('Administrateurs', 'fa fa-user-circle', User::class);
+        yield MenuItem::linkToCrud('Profil Administrateurs', 'fa fa-user-circle', User::class);
         yield MenuItem::linkToCrud('Présentation des associés', 'fa fa-user-circle', Partner::class);
         yield MenuItem::linkToCrud('Présentation de différentes prestations', 'fa fa-picture-o', Performance::class);
         yield MenuItem::linkToCrud('Presentation de chaque page', 'fa fa-file-text', Presentation::class);

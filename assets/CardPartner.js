@@ -26,7 +26,7 @@ export default function CardPartner() {
                   variant="top"
                   src={partner ? "/uploads/" + partner.photo : ""}
                   alt="photo-partner"
-                  style={{ width: "25rem" }}
+                  style={{ width: "20rem" }}
                 />
                 <Card.Body>
                   <Card.Title>{partner ? partner.name : ""}</Card.Title>

@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
-import PriceAccordion from "./PriceAccordion";
-import PriceAccordion1 from "./PriceAccordion1";
+import PriceTable from "./PriceTable";
 
 export default function PricesPage() {
   return (
     <Fragment>
-      <PriceAccordion></PriceAccordion>
-      <PriceAccordion1></PriceAccordion1>
+      <div className="card text-center ">
+        <div className="card-body">
+          <h5 className="card-title"> Tarifs des différentes prestations</h5>
+        </div>
+      </div>
+      <PriceTable></PriceTable>
       <br></br>
     </Fragment>
   );

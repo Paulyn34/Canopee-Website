@@ -72,9 +72,7 @@ export default function FormContact() {
           rows={3}
         />
       </Form.Group>
-      <Button variant="success" type="submit">
-        Submit
-      </Button>
+      <button type="submit">Envoyer</button>
     </Form>
   );
 }

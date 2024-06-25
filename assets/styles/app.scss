@@ -7,7 +7,6 @@ $shade-green-1: #f3f8e9;
 $shade-mauve-1: #e9dfed;
 
 //navbar
-//main-nav
 
 .navbar a {
   position: relative;
@@ -31,6 +30,7 @@ $shade-mauve-1: #e9dfed;
 .navbar {
   background-color: $shade-green-1;
   color: $customGreen;
+  font-weight: bold;
 }
 
 .navbar button {
@@ -44,11 +44,19 @@ $shade-mauve-1: #e9dfed;
 .bg-body-green {
   background-color: #96c245;
 }
-
+//presentation
 .card {
   background-color: #e9dfed;
   color: #2a4b9b;
 }
+
+//targetPublic
+.card2 {
+  background-color: #96c245;
+  color: #2a4b9b;
+}
+
+//button
 button {
   background-color: #7eb41b;
   border-top-left-radius: 75px;

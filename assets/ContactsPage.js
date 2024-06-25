@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import FormContact from "./FormContact";
+import MapContact from "./MapContact";
 
 export default function ContactsPage() {
   const [presentation, setPresentation] = useState();
@@ -22,6 +23,9 @@ export default function ContactsPage() {
           <h5 className="card-title"> {presentation}</h5>
         </div>
       </div>
+      <br></br>
+      <MapContact></MapContact>
+      <br></br>
       <br></br>
       <FormContact></FormContact>
       <br></br>
