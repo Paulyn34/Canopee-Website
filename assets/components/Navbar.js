@@ -1,61 +1,64 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import logo from "./ressources/images/logo-canopees.png";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
-//import logo Canopees
-import logo from "../ressources/images/logo-canopees.png";
-
-export default function Navbar() {
+export default function NavbarTest() {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg ">
-        <div className="container-fluid">
-          <div className="d-flex flex start">
-            <img style={{ width: "18rem" }} src={logo} alt="Logo" />
-          </div>
-          <div className="d-flex flex-end">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarColor02"
-              aria-controls="navbarColor02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+    <>
+      {["md"].map((expand) => (
+        <Navbar key={expand} expand={expand} className=" mb-3">
+          <Container fluid>
+            <Navbar.Brand>
+              <img style={{ width: "18rem" }} src={logo} alt="Logo" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
             >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse ">
-              <ul className="navbar-nav me-auto">
-                <li className="nav-item">
-                  <a className="nav-link " href="#">
-                    Accueil
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#/partners">
-                    Qui sommes-nous?
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link to="/performances" className="nav-link">
-                    Prestations
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/prices" className="nav-link">
-                    Tarifs
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/contacts" className="nav-link">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Fermer
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link>
+                    <Link to="/#" className="nav-link">
+                      Accueil
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/partners" className="nav-link">
+                      Qui sommes-nous?
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/performances" className="nav-link">
+                      Prestations
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/prices" className="nav-link">
+                      Tarifs
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/contacts" className="nav-link">
+                      Contact
+                    </Link>
+                  </Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+    </>
   );
 }

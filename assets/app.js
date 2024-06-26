@@ -21,13 +21,14 @@ import PerformancesPage from "./PerformancesPage";
 import ContactsPage from "./ContactsPage";
 import PricesPage from "./PricesPage";
 import Footer from "./components/Footer";
+import NavbarTest from "./components/Navbar";
 
 console.log("Hello ");
 
 const App = () => {
   return (
     <HashRouter>
-      <Navbar></Navbar>
+      <NavbarTest></NavbarTest>
       <main className="container pt-5">
         <Routes>
           <Route path="/partners" Component={PartnersPage}></Route>

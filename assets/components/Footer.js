@@ -18,9 +18,11 @@ export default function Footer() {
       </Navbar>
       <Navbar className="bg-body-green">
         <Container>
-          <Navbar.Brand>GGU</Navbar.Brand>
-          <Navbar.Brand>CVG</Navbar.Brand>
-          <Navbar.Brand>Mentions légales</Navbar.Brand>
+          <div className="d-flex flex-end">
+            <Navbar.Brand>CGU</Navbar.Brand>
+            <Navbar.Brand>CGV</Navbar.Brand>
+            <Navbar.Brand>Mentions légales</Navbar.Brand>
+          </div>
         </Container>
       </Navbar>
       <Navbar className="bg-body-green">
@@ -51,13 +53,14 @@ export default function Footer() {
               <p>06 85 89 64 57</p>
             </Navbar.Brand>
           </div>
-          <Navbar className="bg-body-green">
-            <Container>
-              <p className="copyright text-center ">
-                copyright © canopées2024.
-              </p>
-            </Container>
-          </Navbar>
+        </Container>
+      </Navbar>
+      <Navbar className="bg-body-green">
+        <Container>
+          <div className="copyright d-flex align-items-center "></div>
+          <Navbar.Brand>
+            <p>copyright © canopées2024.</p>
+          </Navbar.Brand>
         </Container>
       </Navbar>
     </Fragment>

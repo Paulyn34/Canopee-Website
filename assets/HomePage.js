@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import image1 from "./ressources/images/bench-6919896_640.jpg";
 import image2 from "./ressources/images/hotel-swimming-pool-1065275_640.jpg";
 import image3 from "./ressources/images/fountain-7913178_640.jpg";
+
 import image from "./ressources/images/prune-5319780_640.jpg";
 
 export default function HomePage() {
@@ -38,6 +39,7 @@ export default function HomePage() {
         </div>
       </div>
       <br></br>
+
       <div className="d-flex flex-column flex-md-row justify-content-around align-items-center">
         <TargetPublic
           image={image1}
@@ -57,6 +59,7 @@ export default function HomePage() {
         ></TargetPublic>
       </div>
       <br></br>
+
       <CarouselHomePage></CarouselHomePage>
       <br></br>
     </Fragment>
