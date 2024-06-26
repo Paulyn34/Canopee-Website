@@ -11,6 +11,10 @@ $shade-mauve-1: #e9dfed;
 .navbar a {
   position: relative;
   color: $customGreen;
+  font-size: 20px;
+}
+.navbar a:hover {
+  color: $customGreen;
 }
 .navbar a::after {
   content: "";
@@ -67,3 +71,5 @@ button {
   border-width: 0;
   padding: 0px 10px;
 }
+
+

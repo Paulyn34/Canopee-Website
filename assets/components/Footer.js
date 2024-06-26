@@ -46,7 +46,6 @@ export default function Footer() {
                 className="d-inline-block align-top"
                 alt="icon adress"
               />
-              <br></br>
               <p>9 rue des hirondelles</p>
               <p>31700 Léguevin</p>
             </Navbar.Brand>
@@ -59,7 +58,6 @@ export default function Footer() {
                 className="d-inline-block align-top"
                 alt="icon adress"
               />
-              <br></br>
               <p>06 85 89 64 57</p>
             </Navbar.Brand>
           </div>

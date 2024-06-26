@@ -3,12 +3,18 @@ import Form from "react-bootstrap/Form";
 import axios from "axios";
 
 export default function FormContact() {
-  const [formData, setFormData] = useState({
+  const initState = {
     name: "",
     email: "",
     phone: "",
     text: "",
-  });
+  };
+
+  const formReset = () => {
+    setFormData(initState);
+  };
+
+  const [formData, setFormData] = useState(initState);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
@@ -16,7 +22,16 @@ export default function FormContact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Données du formulaire", formData);
-    addMessage();
+    let email = formData.email;
+    let regex =
+      /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    let isMail = regex.test(email);
+    if (!isMail) {
+      alert("Adresse invalide");
+    } else {
+      addMessage();
+      formReset();
+    }
   };
 
   const addMessage = () => {
@@ -71,7 +86,7 @@ export default function FormContact() {
           rows={3}
         />
       </Form.Group>
-      <button type="submit">Envoyer</button>
+      
     </Form>
   );
 }

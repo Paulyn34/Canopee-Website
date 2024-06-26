@@ -28,31 +28,21 @@ export default function NavbarTest() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link>
-                    <Link to="/#" className="nav-link">
-                      Accueil
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/partners" className="nav-link">
-                      Qui sommes-nous?
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/performances" className="nav-link">
-                      Prestations
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/prices" className="nav-link">
-                      Tarifs
-                    </Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/contacts" className="nav-link">
-                      Contact
-                    </Link>
-                  </Nav.Link>
+                  <Link to="/#" className="nav-link">
+                    Accueil
+                  </Link>
+                  <Link to="/partners" className="nav-link">
+                    Qui sommes-nous?
+                  </Link>
+                  <Link to="/performances" className="nav-link">
+                    Prestations
+                  </Link>
+                  <Link to="/prices" className="nav-link">
+                    Tarifs
+                  </Link>
+                  <Link to="/contacts" className="nav-link">
+                    Contact
+                  </Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
