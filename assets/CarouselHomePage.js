@@ -1,7 +1,5 @@
 import React from "react";
-//import react-bootsratp's elements
 import Carousel from "react-bootstrap/Carousel";
-//import images
 import CarouselImage1 from "../assets/ressources/images/flowers-3571119_640.jpg";
 import CarouselImage2 from "../assets/ressources/images/garden-207164_640.jpg";
 import CarouselImage3 from "../assets/ressources/images/garden-1680802_640.jpg";

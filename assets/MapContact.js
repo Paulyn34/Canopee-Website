@@ -1,23 +1,20 @@
 import React from "react";
-//import icons and map
 import icon1 from "../assets/ressources/icons/icons8-adress-50.png";
 import icon2 from "../assets/ressources/icons/icons8-phone-50.png";
 import icon3 from "../assets/ressources/icons/icons8-new-message-50.png";
 import imageMap from "../assets/ressources/images/thumbnail.jpeg";
-//import bootstrap's elements
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function MapContact() {
   return (
-    /*section Contact details*/
     <div className="d-flex justify-content-center">
       <Card style={{ width: "30rem" }}>
         <Card.Img
           variant="top"
           src={imageMap}
           alt="map leguevin"
-          class="w-100"
+          className="w-100"
         />
         <Card.Body>
           <Card.Title className="d-flex justify-content-center">

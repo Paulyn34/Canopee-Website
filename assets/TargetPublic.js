@@ -16,7 +16,7 @@ const TargetPublic = (props) => {
         <Card.Body>
           <Card.Text>
             <CSSTransition in={isMounted} timeout={500} classNames="fade">
-              <div className="fade-in">{props.title}</div>
+              <h5 className="fade-in">{props.title}</h5>
             </CSSTransition>
           </Card.Text>
           <button onClick={handleMount}>{props.description}</button>

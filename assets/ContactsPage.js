@@ -26,7 +26,6 @@ export default function ContactsPage() {
       <br></br>
       <MapContact></MapContact>
       <br></br>
-      <br></br>
       <FormContact></FormContact>
       <br></br>
     </Fragment>

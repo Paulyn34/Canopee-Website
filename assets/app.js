@@ -1,20 +1,11 @@
 import React, { Fragment } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import Navbar from "./components/Navbar";
-
-/*import "./bootstrap.js";
-
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.*/
 
 import "./styles/app.scss";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import PartnersPage from "./PartnersPage";
 import PerformancesPage from "./PerformancesPage";
@@ -23,7 +14,7 @@ import PricesPage from "./PricesPage";
 import Footer from "./components/Footer";
 import NavbarTest from "./components/Navbar";
 
-console.log("Hello ");
+console.log("Hello");
 
 const App = () => {
   return (
@@ -43,7 +34,7 @@ const App = () => {
   );
 };
 
-//pour relier mon front-end React à mon back-end symfony, app, c'est la div insérée dans mon fichier twig
+//to conncet my front-end React to my back-end symfony (app, div insert in my file twig
 const contain = document.getElementById("app");
 const root = createRoot(contain);
 root.render(

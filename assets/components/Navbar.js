@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "./ressources/images/logo-canopees.png";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import logo from "../ressources/images/logo-canopees.png";
 
 export default function NavbarTest() {
   return (
@@ -23,7 +23,7 @@ export default function NavbarTest() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Fermer
+                  <img style={{ width: "18rem" }} src={logo} alt="Logo" />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

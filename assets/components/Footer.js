@@ -4,6 +4,8 @@ import logo from "../ressources/images/logo-canopees.png";
 //import react-bootstrap's elements
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 //import icons
 import icon1 from "../ressources/icons/icons8-adress-50.png";
 import icon2 from "../ressources/icons/icons8-phone-50.png";
@@ -16,15 +18,23 @@ export default function Footer() {
           <img style={{ width: "18rem" }} src={logo} alt="Logo" />
         </Container>
       </Navbar>
-      <Navbar className="bg-body-green">
-        <Container>
-          <div className="d-flex flex-end">
-            <Navbar.Brand>CGU</Navbar.Brand>
-            <Navbar.Brand>CGV</Navbar.Brand>
-            <Navbar.Brand>Mentions légales</Navbar.Brand>
-          </div>
-        </Container>
-      </Navbar>
+      <Nav className="justify-content-end bg-body-green" activeKey="/home">
+        <Nav.Item>
+          <Link to="/#" className="nav-link">
+            CGU
+          </Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to="/#" className="nav-link">
+            CGV
+          </Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to="/#" className="nav-link">
+            Mentions légales
+          </Link>
+        </Nav.Item>
+      </Nav>
       <Navbar className="bg-body-green">
         <Container>
           <div className="d-flex flex-start">
@@ -55,14 +65,13 @@ export default function Footer() {
           </div>
         </Container>
       </Navbar>
-      <Navbar className="bg-body-green">
-        <Container>
-          <div className="copyright d-flex align-items-center "></div>
-          <Navbar.Brand>
-            <p>copyright © canopées2024.</p>
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
+      <Nav className="justify-content-center bg-body-green">
+        <Nav.Item>
+          <p className="text-center mt-4 mb-4 bg-body-green">
+            copyright © canopées2024.
+          </p>
+        </Nav.Item>
+      </Nav>
     </Fragment>
   );
 }

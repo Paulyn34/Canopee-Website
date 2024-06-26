@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import Card from "react-bootstrap/Card";
-import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import Card from "react-bootstrap/Card";
+import axios from "axios";
 
 export default function CardPartner() {
   const [partners, setPartners] = useState();

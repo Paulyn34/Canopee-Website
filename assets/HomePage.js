@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <Fragment>
       <div className="container-fluid g-0">
-        <Col xs={6} className="d-block d-sm-none">
+        <Col xs={6} className="d-block d-md-none">
           <Image style={{ width: "40rem" }} src={image} rounded />
         </Col>
         <SlideHomePage></SlideHomePage>
